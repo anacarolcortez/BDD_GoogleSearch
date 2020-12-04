@@ -38,7 +38,6 @@
     Então sou direcionado para a url oficial da everis
     E clico no link about us da pagina
     Então o título principal da página é about us
-  #//*[@id="block-system-main"]/div/div[1]/div/div[1]/div/div/hgroup/div/div[2]/div/h1
 
 #    Cenário desafio
 #  Cenario: Realizar hover no menu what we do, clicar na opção technology e validar texto principal technology no site da everis

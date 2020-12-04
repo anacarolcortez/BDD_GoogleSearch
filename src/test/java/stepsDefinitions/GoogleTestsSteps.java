@@ -4,6 +4,7 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import pages.EntraLinkAboutUsEveris;
 import pages.EntraPaginaEverisPeloGoogle;
 import pages.GooglePesquisaPage;
 import pages.GoogleResultadosPage;
@@ -13,6 +14,7 @@ public class GoogleTestsSteps {
     GooglePesquisaPage googlePesquisaPage = new GooglePesquisaPage();
     GoogleResultadosPage googleResultadosPage = new GoogleResultadosPage();
     EntraPaginaEverisPeloGoogle entraPaginaEverisPeloGoogle = new EntraPaginaEverisPeloGoogle();
+    EntraLinkAboutUsEveris entraLinkAboutUsEveris = new EntraLinkAboutUsEveris();
 
     @Dado("que eu navego até a url do google")
     public void que_eu_navego_até_a_url_do_google() {
@@ -58,14 +60,12 @@ public class GoogleTestsSteps {
 
     @E("clico no link about us da pagina")
     public void clico_no_link_about_us_da_pagina() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        entraLinkAboutUsEveris.clicarLinkAbout();
     }
 
     @Então("o título principal da página é about us")
     public void o_título_principal_da_página_é_about_us() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        entraLinkAboutUsEveris.checarTituloLinkAbout();
     }
 
 }
