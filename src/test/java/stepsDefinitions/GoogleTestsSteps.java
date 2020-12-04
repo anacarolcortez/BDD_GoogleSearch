@@ -56,4 +56,16 @@ public class GoogleTestsSteps {
         entraPaginaEverisPeloGoogle.validaLinkEveris();
     }
 
+    @E("clico no link about us da pagina")
+    public void clico_no_link_about_us_da_pagina() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Então("o título principal da página é about us")
+    public void o_título_principal_da_página_é_about_us() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
 }
