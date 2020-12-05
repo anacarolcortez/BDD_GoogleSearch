@@ -10,9 +10,8 @@ public class GoogleTestsSteps {
 
     GooglePesquisaPage googlePesquisaPage = new GooglePesquisaPage();
     GoogleResultadosPage googleResultadosPage = new GoogleResultadosPage();
-    EntraPaginaEverisPeloGoogle entraPaginaEverisPeloGoogle = new EntraPaginaEverisPeloGoogle();
     EntraLinkAboutUsEveris entraLinkAboutUsEveris = new EntraLinkAboutUsEveris();
-    PaginaTechnology paginaTechnology = new PaginaTechnology();
+    HomePageEveris homePageEveris = new HomePageEveris();
 
     @Dado("que eu navego até a url do google")
     public void que_eu_navego_até_a_url_do_google() {
@@ -48,12 +47,12 @@ public class GoogleTestsSteps {
 
     @Quando("clico no link da everis na lista de resultados")
     public void clico_no_link_da_everis_na_lista_de_resultados() {
-        entraPaginaEverisPeloGoogle.entraLinkEveris();
+        homePageEveris.entraLinkEveris();
     }
 
     @Então("sou direcionado para a url oficial da everis")
     public void sou_direcionado_para_a_url_oficial_da_everis() {
-        entraPaginaEverisPeloGoogle.validaLinkEveris();
+        homePageEveris.validaLinkEveris();
     }
 
     @E("clico no link about us da pagina")
@@ -68,17 +67,17 @@ public class GoogleTestsSteps {
 
     @E("passo o mouse sobre o menu what we do")
     public void passo_o_mouse_sobre_o_menu_what_we_do() {
-        paginaTechnology.mouseHover();
+        homePageEveris.mouseHover();
     }
 
     @E("clico no link technology")
     public void clico_no_link_technology() {
-        paginaTechnology.clicaLinkTechnology();
+        homePageEveris.clicaLinkTechnology();
     }
 
     @Então("o título principal da página é technology")
     public void o_título_principal_da_página_é_technology() {
-        paginaTechnology.validaLinkTechnology();
+        homePageEveris.validaLinkTechnology();
     }
 
 }

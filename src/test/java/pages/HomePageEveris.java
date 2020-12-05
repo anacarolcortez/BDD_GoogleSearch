@@ -12,7 +12,7 @@ import java.util.List;
 import static org.junit.Assert.assertTrue;
 
 
-public class PaginaTechnology extends DriverFactory {
+public class HomePageEveris extends DriverFactory {
 
     Actions mouseNoMenu = new Actions(pegaDriver());
     WebDriverWait wait = new WebDriverWait(pegaDriver(), 15);
@@ -20,6 +20,19 @@ public class PaginaTechnology extends DriverFactory {
     String linkTechnology = "//*[@id=\"block-system-main-menu\"]//li[4]/a[1]";
     String headerTechnology = "//*[@id=\"header_bgmedia\"]/div/div/hgroup/div/div[2]/div/h1";
     WebElement tituloLinkTechnology;
+
+    public void entraLinkEveris(){
+        wait = new WebDriverWait(pegaDriver(), 15);
+        WebElement linkEveris = wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText("everis Brazil")));
+        linkEveris.click();
+    }
+
+    public void validaLinkEveris(){
+        wait.until(ExpectedConditions.urlToBe("https://www.everis.com/brazil/pt-br/home-br"));
+        String textoUrl = pegaDriver().getCurrentUrl();
+        System.out.println(textoUrl);
+        assertTrue("Link should contain text 'everis'", textoUrl.contains("everis"));
+    }
 
     public void mouseHover(){
         WebElement menu = pegaDriver().findElement(By.cssSelector(elementoWhatWeDo));
