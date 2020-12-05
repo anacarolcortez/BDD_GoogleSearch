@@ -78,8 +78,7 @@ public class GoogleTestsSteps {
 
     @Então("o título principal da página é technology")
     public void o_título_principal_da_página_é_technology() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        paginaTechnology.validaLinkTechnology();
     }
 
 }
