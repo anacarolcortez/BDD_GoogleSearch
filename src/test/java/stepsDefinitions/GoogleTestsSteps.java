@@ -10,7 +10,6 @@ public class GoogleTestsSteps {
 
     GooglePesquisaPage googlePesquisaPage = new GooglePesquisaPage();
     GoogleResultadosPage googleResultadosPage = new GoogleResultadosPage();
-    EntraLinkAboutUsEveris entraLinkAboutUsEveris = new EntraLinkAboutUsEveris();
     HomePageEveris homePageEveris = new HomePageEveris();
 
     @Dado("que eu navego até a url do google")
@@ -57,12 +56,12 @@ public class GoogleTestsSteps {
 
     @E("clico no link about us da pagina")
     public void clico_no_link_about_us_da_pagina() {
-        entraLinkAboutUsEveris.clicarLinkAbout();
+        googleResultadosPage.clicarLinkAbout();
     }
 
     @Então("o título principal da página é about us")
     public void o_título_principal_da_página_é_about_us() {
-        entraLinkAboutUsEveris.checarTituloLinkAbout();
+        googleResultadosPage.checarTituloLinkAbout();
     }
 
     @E("passo o mouse sobre o menu what we do")
