@@ -15,7 +15,7 @@ public class PaginaTechnology extends DriverFactory {
     Actions mouseNoMenu = new Actions(pegaDriver());
     WebDriverWait wait = new WebDriverWait(pegaDriver(), 15);
     String elementoWhatWeDo = "li.first.expanded.dropdown-visible.dropdown";
-    String linkTechnology = "//*[@id=\"block-system-main-menu\"]/ul/li[1]/ul/li[4]/a";
+    String linkTechnology = "//*[@id=\"block-system-main-menu\"]//li[4]/a[1]";
 
 
     public void mouseHover(){
@@ -25,9 +25,8 @@ public class PaginaTechnology extends DriverFactory {
     }
 
     public void clicaLinkTechnology(){
-        List<WebElement> links = pegaDriver().findElements(By.cssSelector(".collapsed"));
-        WebElement linkTechnology = links.stream().filter(link -> link.getText().equals("technology"));
-        linkTechnology.click();
+        WebElement link = pegaDriver().findElement(By.xpath(linkTechnology));
+        link.click();
     }
 
     public void validaLinkTechnology(){
