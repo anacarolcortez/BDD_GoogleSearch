@@ -39,5 +39,14 @@
     E clico no link about us da pagina
     Então o título principal da página é about us
 
-#    Cenário desafio
-#  Cenario: Realizar hover no menu what we do, clicar na opção technology e validar texto principal technology no site da everis
+  Cenario: Clicar na opção technology do menu what we do
+    Dado que eu navego até a url do google
+    E a página é carregada
+    E eu consigo validar que é a página do google
+    Quando eu pesquiso por everis no campo de pesquisa
+    E clico no botão pesquisar
+    E clico no link da everis na lista de resultados
+    Então sou direcionado para a url oficial da everis
+    E passo o mouse sobre o menu what we do
+    E clico no link technology
+    Então o título principal da página é technology

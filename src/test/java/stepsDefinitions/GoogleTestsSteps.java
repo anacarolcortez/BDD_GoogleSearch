@@ -4,10 +4,7 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
-import pages.EntraLinkAboutUsEveris;
-import pages.EntraPaginaEverisPeloGoogle;
-import pages.GooglePesquisaPage;
-import pages.GoogleResultadosPage;
+import pages.*;
 
 public class GoogleTestsSteps {
 
@@ -15,6 +12,7 @@ public class GoogleTestsSteps {
     GoogleResultadosPage googleResultadosPage = new GoogleResultadosPage();
     EntraPaginaEverisPeloGoogle entraPaginaEverisPeloGoogle = new EntraPaginaEverisPeloGoogle();
     EntraLinkAboutUsEveris entraLinkAboutUsEveris = new EntraLinkAboutUsEveris();
+    PaginaTechnology paginaTechnology = new PaginaTechnology();
 
     @Dado("que eu navego até a url do google")
     public void que_eu_navego_até_a_url_do_google() {
@@ -66,6 +64,22 @@ public class GoogleTestsSteps {
     @Então("o título principal da página é about us")
     public void o_título_principal_da_página_é_about_us() {
         entraLinkAboutUsEveris.checarTituloLinkAbout();
+    }
+
+    @E("passo o mouse sobre o menu what we do")
+    public void passo_o_mouse_sobre_o_menu_what_we_do() {
+        paginaTechnology.mouseHover();
+    }
+
+    @E("clico no link technology")
+    public void clico_no_link_technology() {
+        paginaTechnology.clicaLinkTechnology();
+    }
+
+    @Então("o título principal da página é technology")
+    public void o_título_principal_da_página_é_technology() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
     }
 
 }
