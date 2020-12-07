@@ -18,8 +18,6 @@ public class HomePageEveris extends DriverFactory {
     WebDriverWait wait = new WebDriverWait(pegaDriver(), 15);
     String elementoWhatWeDo = "li.first.expanded.dropdown-visible.dropdown";
     String linkTechnology = "//*[@id=\"block-system-main-menu\"]//li[4]/a[1]";
-    String headerTechnology = "//*[@id=\"header_bgmedia\"]/div/div/hgroup/div/div[2]/div/h1";
-    WebElement tituloLinkTechnology;
 
     public void entraLinkEveris(){
         wait = new WebDriverWait(pegaDriver(), 15);
@@ -45,10 +43,4 @@ public class HomePageEveris extends DriverFactory {
         link.click();
     }
 
-    public void validaLinkTechnology(){
-        tituloLinkTechnology = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(headerTechnology)));
-        String txtTituloLinkAboutUs = tituloLinkTechnology.getText();
-        System.out.println(txtTituloLinkAboutUs);
-        assertTrue("título não é technology", txtTituloLinkAboutUs.equals("technology"));
-    }
 }

@@ -11,6 +11,8 @@ public class GoogleTestsSteps {
     GooglePesquisaPage googlePesquisaPage = new GooglePesquisaPage();
     GoogleResultadosPage googleResultadosPage = new GoogleResultadosPage();
     HomePageEveris homePageEveris = new HomePageEveris();
+    PageAboutUs pageAboutUs = new PageAboutUs();
+    PageTechnology pageTechnology = new PageTechnology();
 
     @Dado("que eu navego até a url do google")
     public void que_eu_navego_até_a_url_do_google() {
@@ -61,7 +63,7 @@ public class GoogleTestsSteps {
 
     @Então("o título principal da página é about us")
     public void o_título_principal_da_página_é_about_us() {
-        googleResultadosPage.checarTituloLinkAbout();
+        pageAboutUs.checarTituloLinkAbout();
     }
 
     @E("passo o mouse sobre o menu what we do")
@@ -76,7 +78,7 @@ public class GoogleTestsSteps {
 
     @Então("o título principal da página é technology")
     public void o_título_principal_da_página_é_technology() {
-        homePageEveris.validaLinkTechnology();
+        pageTechnology.validaLinkTechnology();
     }
 
 }
